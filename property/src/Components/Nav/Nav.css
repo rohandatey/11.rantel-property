@@ -33,6 +33,19 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 5px;
+}
+
+.svg11 svg {
+  height: 20px;
+  width: 25px;
+  color: black;
+}
+
+.svg11 h3 {
+  font-size: 12px;
+  color: rgb(56, 52, 52);
+  font-weight: 300;
 }
 
 .logo {
@@ -183,4 +196,55 @@
 
 .ham1:hover {
   background-color: rgb(205, 198, 198);
+}
+
+@media (max-width: 900px) {
+  #btn1 {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .logo h1 {
+    display: none;
+  }
+  .nav1 {
+    overflow: hidden;
+    padding: 10px;
+  }
+  .nav2 {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    justify-content: start;
+    padding: 10px;
+  }
+  .svg11 {
+    flex-shrink: 0;
+    scrollbar-width: none;
+  }
+  .search input {
+    width: 180px;
+    font-size: 15px;
+  }
+  .search button span {
+    display: none;
+  }
+  .search {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  #btn2 {
+    border: none;
+    padding: 0;
+  }
+  #svg2 {
+    display: none;
+  }
+  #svg1 {
+    width: 25px;
+    height: 25px;
+    fill: black;
+  }
 }

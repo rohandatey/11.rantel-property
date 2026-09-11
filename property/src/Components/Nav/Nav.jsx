@@ -1,9 +1,19 @@
 import React, { useState } from "react";
 import "./Nav.css";
+// import logo from ".images/assets/p.jpg";
 import logo from "../../assets/p.jpg";
 import { CiSearch } from "react-icons/ci";
 import { IoMdMenu } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
+import { MdOutlineWhatshot } from "react-icons/md";
+import { GiFamilyHouse } from "react-icons/gi";
+import { MdOutlineBedroomParent } from "react-icons/md";
+import { GiTreehouse } from "react-icons/gi";
+import { MdOutlinePool } from "react-icons/md";
+import { LuTentTree } from "react-icons/lu";
+import { GiWoodCabin } from "react-icons/gi";
+import { FaShop } from "react-icons/fa6";
+import { GiLighthouse } from "react-icons/gi";
 
 const Nav = () => {
   const [menu, setMenu] = useState(false);
@@ -28,7 +38,7 @@ const Nav = () => {
         <div className="search">
           <input type="text" placeholder="Search Destinon" />
           <button>
-            Search <CiSearch />
+           <span> Search</span> <CiSearch />
           </button>
         </div>
 
@@ -42,7 +52,18 @@ const Nav = () => {
         </div>
       </div>
 
-      <div className="nav2"></div>
+      {/* here i use icons */}
+      <div className="nav2">
+        <div className="svg11"><MdOutlineWhatshot /><h3>Trending</h3></div>
+        <div className="svg11">< GiFamilyHouse/><h3>Houses</h3></div>
+        <div className="svg11"><MdOutlineBedroomParent /><h3>Rooms</h3></div>
+        <div className="svg11"><GiTreehouse/><h3>FarmHouse</h3></div>
+        <div className="svg11"><MdOutlinePool/><h3>PoolHouse</h3></div>
+        <div className="svg11"><LuTentTree/><h3>TentHouse</h3></div>
+        <div className="svg11"><GiWoodCabin /><h3>Cabin</h3></div>
+        <div className="svg11"><FaShop /><h3>Shops</h3></div>
+        <div className="svg11"><GiLighthouse /><h3>seaHouse</h3></div>
+     </div>
     </div>
   );
 };
