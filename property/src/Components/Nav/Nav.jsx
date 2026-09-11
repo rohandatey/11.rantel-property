@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Nav.css";
-// import logo from ".images/assets/p.jpg";
+
 import logo from "../../assets/p.jpg";
 import { CiSearch } from "react-icons/ci";
 import { IoMdMenu } from "react-icons/io";
@@ -14,6 +14,7 @@ import { LuTentTree } from "react-icons/lu";
 import { GiWoodCabin } from "react-icons/gi";
 import { FaShop } from "react-icons/fa6";
 import { GiLighthouse } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [menu, setMenu] = useState(false);
@@ -21,24 +22,26 @@ const Nav = () => {
     <div id="Nav">
       {menu && (
         <div className="menu">
-          <div className="ham1">Login</div>
-          <div className="ham1">SignUp</div>
+          <Link to="/login" className="ham1">Login</Link>
+          <Link to="/signup" className="ham1">SignUp</Link>
           <div className="ham1">List your home</div>
           <div className="ham1">Help Center</div>
         </div>
       )}
       <div className="nav1">
         {/* fro logo */}
-        <div className="logo">
-          <img src={logo} alt="img" width="50px" />
-          <h1>Priver propertt Rental</h1>
-        </div>
 
+        <Link to={""}>
+          <div className="logo">
+            <img src={logo} alt="img" width="50px" />
+            <h1>Priver propertt Rental</h1>
+          </div>
+        </Link>
         {/* for search */}
         <div className="search">
           <input type="text" placeholder="Search Destinon" />
           <button>
-           <span> Search</span> <CiSearch />
+            <span> Search</span> <CiSearch />
           </button>
         </div>
 
@@ -54,16 +57,43 @@ const Nav = () => {
 
       {/* here i use icons */}
       <div className="nav2">
-        <div className="svg11"><MdOutlineWhatshot /><h3>Trending</h3></div>
-        <div className="svg11">< GiFamilyHouse/><h3>Houses</h3></div>
-        <div className="svg11"><MdOutlineBedroomParent /><h3>Rooms</h3></div>
-        <div className="svg11"><GiTreehouse/><h3>FarmHouse</h3></div>
-        <div className="svg11"><MdOutlinePool/><h3>PoolHouse</h3></div>
-        <div className="svg11"><LuTentTree/><h3>TentHouse</h3></div>
-        <div className="svg11"><GiWoodCabin /><h3>Cabin</h3></div>
-        <div className="svg11"><FaShop /><h3>Shops</h3></div>
-        <div className="svg11"><GiLighthouse /><h3>seaHouse</h3></div>
-     </div>
+        <div className="svg11">
+          <MdOutlineWhatshot />
+          <h3>Trending</h3>
+        </div>
+        <div className="svg11">
+          <GiFamilyHouse />
+          <h3>Houses</h3>
+        </div>
+        <div className="svg11">
+          <MdOutlineBedroomParent />
+          <h3>Rooms</h3>
+        </div>
+        <div className="svg11">
+          <GiTreehouse />
+          <h3>FarmHouse</h3>
+        </div>
+        <div className="svg11">
+          <MdOutlinePool />
+          <h3>PoolHouse</h3>
+        </div>
+        <div className="svg11">
+          <LuTentTree />
+          <h3>TentHouse</h3>
+        </div>
+        <div className="svg11">
+          <GiWoodCabin />
+          <h3>Cabin</h3>
+        </div>
+        <div className="svg11">
+          <FaShop />
+          <h3>Shops</h3>
+        </div>
+        <div className="svg11">
+          <GiLighthouse />
+          <h3>seaHouse</h3>
+        </div>
+      </div>
     </div>
   );
 };
